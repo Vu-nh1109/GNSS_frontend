@@ -705,7 +705,6 @@ function TelemetryCharts() {
                 <td>Station(s)</td>
                 <td><select id="station" name="stations" onChange={e => setStation(e.target.value)}>
                   <option value="TQBS">TQBS (Navis)</option>
-                  <option value="Test_Station">Test Station</option>
                 </select></td>
               </tr>
               <tr>
