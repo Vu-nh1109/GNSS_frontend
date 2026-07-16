@@ -159,7 +159,8 @@ function TelemetryCharts() {
 
   // Backend
   const BACKEND_HOST = process.env.REACT_APP_BACKEND_HOST || 'localhost:3001';
-  const BACKEND_HTTP = `http://${BACKEND_HOST}`;
+  const HTTP_PROTO = window.location.protocol === 'https:' ? 'https' : 'http';
+  const BACKEND_HTTP = `${HTTP_PROTO}://${BACKEND_HOST}`;
   const WS_PROTO = window.location.protocol === 'https:' ? 'wss' : 'ws';
 
   const toTelemetryArray = (payload) => {
