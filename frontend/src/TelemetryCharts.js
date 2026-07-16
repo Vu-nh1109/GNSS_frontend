@@ -158,7 +158,7 @@ function TelemetryCharts() {
   };
 
   // Backend
-  const BACKEND_HOST = 'localhost:3001';
+  const BACKEND_HOST = process.env.REACT_APP_BACKEND_HOST || 'localhost:3001';
   const BACKEND_HTTP = `http://${BACKEND_HOST}`;
   const WS_PROTO = window.location.protocol === 'https:' ? 'wss' : 'ws';
 
